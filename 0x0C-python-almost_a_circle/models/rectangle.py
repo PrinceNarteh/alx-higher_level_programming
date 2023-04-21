@@ -7,8 +7,7 @@ from models.base import Base
 
 class Rectangle(Base):
     '''
-        Defining the Rectangle class
-        Inherits from:
+        Defining the Rectangle class that inherits from:
             Base
     '''
 
@@ -114,7 +113,7 @@ class Rectangle(Base):
 
     def to_dictionary(self):
         '''
-            Returns a dictionary representation of this class
+            Returns a dict representation of this class
         '''
         return {'x': getattr(self, "x"),
                 'y': getattr(self, "y"),
@@ -134,7 +133,7 @@ class Rectangle(Base):
 
     def __str__(self):
         '''
-            Overwritting the str method
+            Overriding the str method
         '''
         return "[Rectangle] ({}) {}/{} - {}/{}".format(self.id, self.x, self.y,
                                                        self.width, self.height)
